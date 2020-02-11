@@ -1,0 +1,37 @@
+{
+  "name": "hydrogen-cx",
+  "version": "0.0.1",
+  "description": "Web Components for use with Hydrogen",
+  "main": "build/index.js",
+  "dependencies": {
+    "@dashkite/carbon": "file:../carbon",
+    "@dashkite/helium": "file:../helium",
+    "marked": "^0.8.0"
+  },
+  "devDependencies": {
+    "coffeescript": "^2.5.1",
+    "panda-9000": "^5.0.2",
+    "panda-quill": "^5.0.0",
+    "pug": "^2.0.4",
+    "stylus": "^0.54.7"
+  },
+  "scripts": {
+    "test": "p9k test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashkite/hydrogen-cx.git"
+  },
+  "keywords": [
+    "Web",
+    "Components",
+    "content",
+    "management",
+    "JavaScript"
+  ],
+  "author": "Dan Yoder",
+  "bugs": {
+    "url": "https://github.com/dashkite/hydrogen-cx/issues"
+  },
+  "homepage": "https://github.com/dashkite/hydrogen-cx#readme"
+}
