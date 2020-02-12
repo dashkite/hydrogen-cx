@@ -2,9 +2,10 @@ import {Gadget, mixin, tag, bebop, shadow,
   render, properties, events,
   describe, resource, queryable, smart} from "panda-play"
 import {dashed} from "panda-parchment"
+import {identity} from "panda-garden"
 
-import {lookup as registryLookup} from "@dashkite/helium"
-import {lookup, links} from "@dashkite/hydrogen"
+import Store from "@dashkite/hydrogen"
+import Registry from "@dashkite/helium"
 
 import template from "./template"
 
@@ -20,19 +21,19 @@ class extends Gadget
 
   mixin @, [
 
-    tag "site-wikitext"
+    tag "hydrogen-wikitext"
 
     bebop, describe, shadow, queryable #, navigate
 
     resource -> links markup @html, await @data
 
     getter
-      data: -> lookup "path", @description.path ? {}
+      data: -> Store.get index: "path", key: @description.path ? {}
       script: -> @dom.querySelector "script"
       type: -> @script.getAttribute "type"
-      html: ->
-        if @type == "text/markdown" then markdown @script.text else @script.text
-      cms: -> registryLookup @description.store ? "cms"
+      transform: -> if @type == "text/markdown" then markdown else identity
+      html: -> @transform @script.text
+      cms: -> Registry.get @description.store ? "cms"
 
     render smart template
 
