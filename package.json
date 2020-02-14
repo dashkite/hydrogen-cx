@@ -6,9 +6,11 @@
   "dependencies": {
     "@dashkite/carbon": "file:../carbon",
     "@dashkite/helium": "file:../helium",
+    "@dashkite/hydrogen": "file:../hydrogen",
     "marked": "^0.8.0"
   },
   "devDependencies": {
+    "@dashkite/vogue": "file:../vogue",
     "coffeescript": "^2.5.1",
     "panda-9000": "^5.0.2",
     "panda-quill": "^5.0.0",
@@ -29,6 +31,7 @@
     "management",
     "JavaScript"
   ],
+  "license": "SEE LICENSE IN LICENSE.md",
   "author": "Dan Yoder",
   "bugs": {
     "url": "https://github.com/dashkite/hydrogen-cx/issues"

@@ -15,7 +15,7 @@ class extends Gadget
 
     bebop, shadow, describe #, navigate
 
-    resource -> Store.find @cms, @dom.dataset.key
+    resource -> Store.find @cms, @description.key
 
     getter cms: -> Registry.get @description.store ? "cms"
 

@@ -7,6 +7,7 @@ import coffee from "coffeescript"
 import pug from "pug"
 import _stylus from "stylus"
 import markdown from "marked"
+import vogue from "@dashkite/vogue"
 
 
 {define, run, glob, read, write,
@@ -31,7 +32,7 @@ define "js", ->
         transpile:
           presets: [[
             resolve "@babel/preset-env"
-            targets: node: "13.6"
+            targets: node: "current"
           ]]
     map extension ".js"
     map write "./build"
@@ -44,6 +45,7 @@ define "html", ->
     tee ({source, target}) ->
       stylus = (code) ->
         _stylus.render code,
+          use: vogue
           filename: source.path
 
       target.content = do ->

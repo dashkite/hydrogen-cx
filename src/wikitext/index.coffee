@@ -1,6 +1,6 @@
 import {Gadget, mixin, tag, bebop, shadow,
-  render, properties, events,
-  describe, resource, queryable, smart} from "panda-play"
+  render, properties, getter, events,
+  describe, resource, queryable, smart} from "@dashkite/carbon"
 import {dashed} from "panda-parchment"
 import {identity} from "panda-garden"
 
@@ -25,10 +25,10 @@ class extends Gadget
 
     bebop, describe, shadow, queryable #, navigate
 
-    resource -> links markup @html, await @data
+    resource -> Store.links @cms, markup @html, await @data
 
     getter
-      data: -> Store.get index: "path", key: @description.path ? {}
+      data: -> Store.get @cms, index: "path", key: @description.path ? {}
       script: -> @dom.querySelector "script"
       type: -> @script.getAttribute "type"
       transform: -> if @type == "text/markdown" then markdown else identity
