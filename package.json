@@ -1,5 +1,5 @@
 {
-  "name": "hydrogen-cx",
+  "name": "@dashkite/hydrogen-cx",
   "version": "0.0.1",
   "description": "Web Components for use with Hydrogen",
   "main": "build/index.js",
