@@ -3,6 +3,12 @@ import {Gadget, mixin, tag, bebop, shadow,
   describe, resource, queryable, smart} from "@dashkite/carbon"
 import {dashed} from "panda-parchment"
 import {identity} from "panda-garden"
+import marked from "marked"
+markdown = (text) ->
+  marked text,
+    smartypants: true
+    gfm: true
+
 
 import Store from "@dashkite/hydrogen"
 import Registry from "@dashkite/helium"
