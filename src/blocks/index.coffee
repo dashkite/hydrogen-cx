@@ -13,7 +13,7 @@ class extends Gadget
 
     tag "hydrogen-blocks"
 
-    bebop, shadow, describe #, navigate
+    bebop, shadow, describe
 
     resource -> Store.glob @cms, @dom.dataset.glob
 

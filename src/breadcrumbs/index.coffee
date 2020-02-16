@@ -22,7 +22,7 @@ class extends Gadget
 
     tag "hydrogen-breadcrumbs"
 
-    bebop, shadow, describe #, navigate
+    bebop, shadow, describe
 
     resource ->
       path = @description.path

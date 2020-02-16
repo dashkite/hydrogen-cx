@@ -1,19 +1,17 @@
+import {dashed} from "panda-parchment"
+import {identity} from "panda-garden"
 import {Gadget, mixin, tag, bebop, shadow,
   render, properties, getter, events, local,
   describe, resource, queryable, smart} from "@dashkite/carbon"
-import {dashed} from "panda-parchment"
-import {identity} from "panda-garden"
+import Store from "@dashkite/hydrogen"
+import Registry from "@dashkite/helium"
+import template from "./template"
 import marked from "marked"
+
 markdown = (text) ->
   marked text,
     smartypants: true
     gfm: true
-
-
-import Store from "@dashkite/hydrogen"
-import Registry from "@dashkite/helium"
-
-import template from "./template"
 
 markup = do ({filters, apply, key} = {}) ->
   apply = do (filters = {dashed}) ->
@@ -29,7 +27,7 @@ class extends Gadget
 
     tag "hydrogen-wikitext"
 
-    bebop, describe, shadow, queryable #, navigate
+    bebop, describe, shadow, queryable
 
     resource -> Store.links @cms, markup @html, await @data
 

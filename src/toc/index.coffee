@@ -14,7 +14,7 @@ class extends Gadget
 
     tag "hydrogen-toc"
 
-    bebop, shadow, describe #, navigate
+    bebop, shadow, describe
 
     resource -> Store.glob @cms, @description.glob
 
