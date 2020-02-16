@@ -1,5 +1,5 @@
 import {Gadget, mixin, tag, bebop, shadow,
-  render, properties, events, local,
+  render, properties, events,
   describe, resource, getter, smart} from "@dashkite/carbon"
 
 import Store from "@dashkite/hydrogen"

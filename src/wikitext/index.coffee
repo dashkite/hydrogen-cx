@@ -1,5 +1,5 @@
 import {Gadget, mixin, tag, bebop, shadow,
-  render, properties, getter, events,
+  render, properties, getter, events, local,
   describe, resource, queryable, smart} from "@dashkite/carbon"
 import {dashed} from "panda-parchment"
 import {identity} from "panda-garden"
@@ -44,7 +44,7 @@ class extends Gadget
     render smart template
 
     events
-      render: ->
+      render: local ->
         for e in @query.elements["[class^='language']"]
           Prism?.highlightElement? e
 
