@@ -46,6 +46,6 @@ class extends Gadget
     events
       render: ->
         for e in @query.elements["[class^='language']"]
-          Prism.highlightElement e
+          Prism?.highlightElement? e
 
   ]
