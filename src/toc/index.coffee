@@ -22,4 +22,7 @@ class extends Gadget
 
     render smart template
 
+    events
+      describe: local -> @render()
+
   ]

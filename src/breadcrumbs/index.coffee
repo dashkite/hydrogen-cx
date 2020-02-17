@@ -10,6 +10,7 @@ import Registry from "@dashkite/helium"
 import template from "./template"
 
 join = (string, array) -> array.join string
+
 parent = (path) ->
   components = split "/", path
   components.pop()
@@ -28,7 +29,7 @@ class extends Gadget
       path = @description.path
       crumbs = []
       current = @description.current ?
-        (await Store.get @cms, "path", path)?.title
+        (await Store.get @cms, index: "path", key: path)?.title
       while (path = parent path)?
         if (target = await Store.get @cms, "path", path)?
           crumbs.unshift target

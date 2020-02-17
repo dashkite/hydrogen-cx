@@ -5,8 +5,8 @@ if results.length > 0
   ul
     each result in results
       li
-        if current == result.title
-          span.current= result.title
+        if current == result.name
+          span.current= result.title || result.name
         else
           a(href = result.link)= result.title
 else
