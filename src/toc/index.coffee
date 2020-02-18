@@ -22,6 +22,7 @@ class extends Gadget
 
     render smart template
 
+    # TODO should this just be part of reactive mixin
     events
       describe: local -> @render()
 

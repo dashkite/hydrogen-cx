@@ -31,7 +31,7 @@ class extends Gadget
       current = @description.current ?
         (await Store.get @cms, index: "path", key: path)?.title
       while (path = parent path)?
-        if (target = await Store.get @cms, "path", path)?
+        if (target = await Store.get @cms, index: "path", key: path)?
           crumbs.unshift target
       {crumbs, current}
 
