@@ -7,10 +7,12 @@
     "@dashkite/carbon": "file:../carbon",
     "@dashkite/helium": "file:../helium",
     "@dashkite/hydrogen": "file:../hydrogen",
-    "marked": "^0.8.0"
+    "marked": "^0.8.0",
+    "prismjs": "^1.19.0"
   },
   "devDependencies": {
     "@dashkite/vogue": "file:../vogue",
+    "babel-plugin-prismjs": "^2.0.1",
     "coffeescript": "^2.5.1",
     "panda-9000": "^5.0.2",
     "panda-quill": "^5.0.0",

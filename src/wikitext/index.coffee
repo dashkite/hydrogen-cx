@@ -7,6 +7,7 @@ import Store from "@dashkite/hydrogen"
 import Registry from "@dashkite/helium"
 import template from "./template"
 import marked from "marked"
+import Prism from "prismjs"
 
 markdown = (text) ->
   marked text,
@@ -44,6 +45,6 @@ class extends Gadget
     events
       render: local ->
         for e in @query.elements["[class^='language']"]
-          Prism?.highlightElement? e
+          Prism.highlightElement e
 
   ]

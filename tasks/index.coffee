@@ -34,6 +34,14 @@ define "js", ->
             resolve "@babel/preset-env"
             targets: node: "current"
           ]]
+          plugins: [
+            [ "prismjs",
+                "languages": ["javascript", "coffee", "yaml"],
+                # "plugins": ["line-numbers"],
+                # "theme": "twilight",
+                # "css": true
+            ]
+          ]
     map extension ".js"
     map write "./build"
   ]
